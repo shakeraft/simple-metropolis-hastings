@@ -116,7 +116,8 @@ fn target_distribution(x: f32) -> f32 {
 
 fn main() {
     let num_samples: i32 = 6000;
-    let (markov_chain, acceptance) = metropolis_hastings(2500, num_samples, 0.0, target_distribution);
+    let (markov_chain, acceptance) =
+        metropolis_hastings(2500, num_samples, 0.0, target_distribution);
     println!(
         "Acceptance Rate: {}",
         acceptance as f32 / num_samples as f32
